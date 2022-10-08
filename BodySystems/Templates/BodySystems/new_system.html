@@ -1,0 +1,28 @@
+{% extends 'BodySystems/index.html' %}
+{%load crispy_forms_tags%}
+
+{% block content %}
+
+
+<div class="container">
+    <form action="/NewSystem" method="post">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-4">
+                {{ form.code | as_crispy_field }} 
+            </div>
+            <div class="col-8">
+                {{ form.name | as_crispy_field }} 
+            </div>
+            <div class="col-12">
+                {{ form.description | as_crispy_field }} 
+            </div>
+        </div>
+        
+        <input type="submit" value="ADD">
+    </form>
+
+</div>
+
+{% endblock %}

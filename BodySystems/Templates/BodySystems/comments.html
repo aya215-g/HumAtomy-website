@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'BodySystems/style.css' %}">
+    <title>Comment</title>
+    <style>
+        .dd{
+            border:5px solid rgb(236, 229, 229);
+            font-weight: bolder;
+            font-size: larger;
+            padding: 5px;
+
+
+
+
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="{% static 'BodySystems/CSS/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="topnav">
+      
+
+        <a href="{% url 'home' %}" target="_blank">Home</a>
+        <a href="{% url 'about' %}" target="_blank">About</a>
+        <a href="{% url 'latest_news' %}" target="_blank">Latest News</a>
+        <a href="{% url 'list_all_department' %}" target="_blank">Comments</a> 
+
+        <div class="dropdown">
+            <button class="dropbtn" class = "actived">Body Systems
+              <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+                <a href="digestive.html" target="blank">Digestive system</a>
+                <a href="#">Respiratory System</a>
+                <a href="nervous.html" target="_blank">Nervous System</a>  
+                
+          </div>
+        </div>
+        <div id="search"><input type="text" placeholder="Search..." id="search"></div>
+    
+      
+        <div id="logo"><img src="{% static 'BodySystems/images/logo.jpg' %}" width="60px" height="50px"></div>
+    </div>
+    <br> <br> <br>
+   
+
+    {% block content %}
+
+    {% endblock %}
+   
+   
+</body>
+</html>

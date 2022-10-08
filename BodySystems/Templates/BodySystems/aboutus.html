@@ -1,0 +1,107 @@
+{% extends 'BodySystems/index.html' %}
+
+{% block content %}
+
+<style>
+    button{
+        border-radius: 2%;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        box-shadow: 5px 5px 15px black;
+    }
+    #RS{
+        background-color: white; 
+        color: black; 
+        border: 2px solid rgb(5, 78, 92);
+        margin-left: 15%;
+    }
+    #RS:hover{
+        background-color: rgb(5, 78, 92);
+        color: white;
+    }
+    #DS{
+        background-color: white; 
+        color: black; 
+        border: 2px solid rgb(5, 78, 92);
+        margin-left: 15%;
+        
+    }
+    #DS:hover{
+        background-color: rgb(5, 78, 92);
+        color: white;
+    }
+    #NS{
+        background-color: white; 
+        color: black; 
+        border: 2px solid rgb(5, 78, 92);
+        float: right;
+        margin-right: 20%;
+    }
+    #NS:hover{
+        background-color: rgb(5, 78, 92);
+        color: white;
+    }
+
+</style>
+
+<div class="jumbotron text-center">
+    <h1>The Main Systems in Human Body</h1>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        {% for sys in systems %}
+            <div class="col-sm-4">
+                <h4>  
+                    <a href="{% url 'display_system' sys.pk %}">
+                        {{sys.name}}
+                    </a>
+                </h4>
+                <hr class="my-2">
+                <p> {{sys.description}} </p>
+            </div>
+        {% endfor %}
+
+
+    </div>
+
+</div>
+<br>
+
+<div class="container">
+    <a href="{% url 'add_new_system' %}" class="btn btn-danger">
+        ADD NEW SYSTEM
+    </a>
+    <br>
+</div>
+<hr> <br>
+
+<button id="RS" title="visit respiratory system page">
+    <a href="{% url 'respiratory' %}" target="_blank">
+        Respiratory System
+    </a>
+</button>
+<button id="DS" title="visit digestive system page"> 
+    <a href="{% url 'digestive' %}" target="_blank">
+        Digestive System
+    </a>
+
+</button>
+<button id="NS" title="visit nervous system page"> 
+    <a href="{% url 'nervous' %}" target="_blank">
+        Nervous System
+    </a>
+
+</button>
+
+<br> <br> <br> <br>
+
+{% endblock %}

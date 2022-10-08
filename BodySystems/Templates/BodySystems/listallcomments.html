@@ -1,0 +1,59 @@
+{% extends 'BodySystems/comments.html' %}
+
+
+{% block content %}
+
+
+
+
+<div class="jumbtron text-center" style="background-color: rgb(5, 78, 92); color: white;">
+    
+    
+</div>
+
+<div class="container" style="background-color: rgb(216, 211, 211);">
+    <div class="colum">
+        {% for dept in departments %}
+            <div class="comment-box">
+
+                <form>
+                <h4>
+                    {{dept.name}}
+                </h4>
+                
+                <p>{{dept.description}}</p>
+                <h8 class="text-muted">{{dept.dept_date}}</h8>
+                <hr class="my-1">
+                </form>
+                
+
+
+
+            </div>
+        {% endfor %}
+
+        <br> 
+
+
+
+        <div class="container">
+            <a href="{% url 'add_new_department' %}" class="btn btn-danger">
+                Add Comment 
+            </a>
+            <br>
+        
+        </div> 
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+{% endblock %}

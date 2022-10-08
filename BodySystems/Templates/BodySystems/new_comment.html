@@ -1,0 +1,29 @@
+{% extends 'BodySystems/comments.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+<div class="jumbotron text-center" style="background-color: rgb(5, 78, 92); color: white;">
+    <h2> Write Your Comment</h2>
+    
+
+
+</div>
+<div class="container" style="color: white;">
+    <form action="/NewComment" method="post">
+        {% csrf_token %}
+
+        {{form | crispy}}
+
+        <input type="submit" value="Add comment">
+        
+
+    </form>
+    <br>
+
+</div>    
+
+
+
+{% endblock %}

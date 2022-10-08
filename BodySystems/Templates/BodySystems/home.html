@@ -1,0 +1,80 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'BodySystems/style.css' %}">
+    <script src="{% static 'BodySystems/javascript.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+    <style>
+        #sign{
+            background-color: rgb(17, 114, 138); 
+            color: white; 
+            border: 2px solid rgb(17, 114, 138);
+        }
+        #sign:hover{
+        background-color: white;
+        color: rgb(17, 114, 138);
+}
+    </style>
+</head>
+<body>
+    <div class="topnav">
+      
+
+        <a href="{% url 'home' %}" >Home</a>
+        <a href="{% url 'about' %}" >About</a>
+        <a href="{% url 'latest_news' %}" >Latest News</a>
+        <a href="{% url 'list_all_department' %}" >Comments</a> 
+
+        <div class="dropdown">
+            <button class="dropbtn" class = "actived">Body Systems
+              <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+                <a href="{% url 'digestive' %}">Digestive system</a>
+                <a href="{% url 'respiratory' %}">Respiratory System</a>
+                <a href="{% url 'nervous' %}">Nervous System</a>  
+                
+          </div>
+        </div>
+        <div id="search"><input type="text" placeholder="Search..." id="search"> <button id = "SRCH"type="submit"><i class="fa fa-search"></i></button> </div>
+    
+      
+        <div id="logo"><img src="{% static 'BodySystems/images/logo.jpg' %}" width="60px" height="50px"></div>
+    </div>
+
+    <br> <br>
+
+    <div class = "about">
+        <p>
+            <h2>
+                this website provides information about human body systems, thier organs, functions 
+                <br>and common deseases affecting them.
+                also provides the latest health news
+                <br>
+                with the ability to ask questions and have a response from the specialists
+
+            </h2>
+        </p>
+    </div>
+    <br> <br> <br> <br>
+
+    <div>
+        <button id="sign" title="create new account">
+            <a href="{% url 'sign up to library' %}">
+                SignUp
+            </a>
+        </button>
+        <button id="sign" title="create new account">
+            <a href="{% url 'sign in to library' %}">
+                LogIn
+            </a>
+        </button>
+    </div>
+
+</body>
+</html>

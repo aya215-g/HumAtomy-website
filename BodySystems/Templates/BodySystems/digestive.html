@@ -1,0 +1,402 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'BodySystems/css/style_systems.css' %}">
+    <script src="{% static 'BodySystems/javascript.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Digestive System</title>
+</head>
+<body>
+    <div class="topnav">
+        
+
+      <a href="{% url 'home' %}" target="_blank">Home</a>
+      <a href="{% url 'about' %}" target="_blank">About</a>
+      <a href="{% url 'latest_news' %}" target="_blank">Latest News</a>
+      <a href="{% url 'list_all_department' %}" target="_blank">Comments</a> 
+
+        <div class="dropdown">
+            <button class="dropbtn" class = "actived">Body Systems
+              <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+                <a href="#" >Digestive system</a>
+                <a href="{% url 'respiratory' %}" target="blank">Respiratory System</a>
+                <a href="{% url 'nervous' %}" target="_blank">Nervous System</a>  
+
+          </div>
+        </div>
+        <div id="search"><input type="text" placeholder="Search..." id="search"> <button id = "SRCH"type="submit"><i class="fa fa-search"></i></button> </div>
+    
+      
+        <div id="logo"><img src="{% static 'BodySystems/images/logo.jpg' %}" width="60px" height="50px"></div>
+    </div>
+
+
+
+    <script>
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";}
+
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";}
+  
+
+    </script>
+
+
+
+    <div class = "addr">
+
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#M">Mouth</a>
+            <a href="#E">Esophagus</a>
+            <a href="#S">Stomach</a>
+            <a href="#SI">Small Intestine</a>
+            <a href="#P">Pancrease</a>
+            <a href="#L">Liver</a>
+            <a href="#G">Gallblader</a>
+            <a href="#LI">Large Intestine</a>
+            <a href="#A">Anus</a>
+            <a href="#diseases">Common Disorders</a>
+          </div>
+          <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776; Choose</span>
+    
+      <div class="addr_vid"> 
+        <video width="500px" height="250px" autoplay muted loop><source src = "{% static 'BodySystems/images/digestive_vid 2.webm' %}" type="video/webm"></video>
+      </div> 
+
+
+    </div>
+
+
+    <br> <br>
+
+
+
+
+    <!--ORGANS-->
+
+    
+<table cellspacing="70">
+    <tr>
+    <td>
+      <div class="flip-card" id="M">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'BodySystems/images/mouth.png' %}" alt="mouth" style="width:200px;height:200px;">
+            <br> <br>
+            <span class = "sp1" style="padding-left: 7%;">Mouth</span>
+          </div>
+          <div class="flip-card-back">
+            <p style="font-size: large;">
+                Digestion begins in your mouth. 
+                Your teeth grind the food you eat and mix it with saliva to form a kind of ball, 
+                known as a bolus <br>
+                During the mixing, an enzyme called salivary amylase starts breaking down carbohydrates. 
+                Once the food is soft and relatively flexible, the tongue pushes it to the back of your mouth and into the esophagus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      </td>
+
+      
+
+
+
+    <td>
+      <div class="flip-card" id="E" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/esophagus.jpeg' %}" alt="esophagus" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp2" style="padding-left: 5%;">Esophagus</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    <br>
+                    Your esophagus is a flattened muscular tube that connects your mouth to your stomach. 
+                    As food is swallowed, your esophagus expands. It takes food about three seconds to pass through your esophagus, 
+                    depending on the texture and consistency.
+                    <br> 
+                </p>
+          </div>
+        </div>
+      </div>
+
+    </td>
+
+
+    <td>
+      <div class="flip-card" id="S">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/stomach.jpg' %}" alt="stomach" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp3" style="padding-left: 5%;">Stomch</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    After the food enters the stomach, the muscles there mix the food and fluids with digestive juices and enzymes in order to break down the food and produce chyme from this mixture.
+                    The stomach tries to empty the chyme, which is a semi-liquid acidic mass, to pass from the stomach into the small intestine
+                    <br>
+                    <br> 
+                </p>
+          </div>
+        </div>
+      </div>
+  
+    </td>
+
+      </tr>
+
+  
+
+    <!--END OF FIRST ROW-->
+
+
+
+    <tr>
+        <td>
+      <div class="flip-card" id="SI">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/small_int.jpeg' %}" alt="small intaestine" style="width:200px;height:200px;">
+                <br> <br>
+                <span id = "sp4" style="padding-left: 5%;">Small Intestine</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    The small intestine consists of three main parts, the duodenum, jejunum, and ileum, with a length of approximately 6.6 meters.
+                    The muscles of the small intestine mix the food with the digestive juices coming from the pancreas, liver and intestines, then push the food forward to complete the digestion process.
+                    the walls of the small intestine absorb water and digested nutrients, while the waste products of the digestive process move to the large intestine.
+                    <br>
+                </p>
+            </div>
+        </div>
+      </div>
+      </td>
+
+
+    <td>
+      <div class="flip-card" id="P">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/pancrease.jpeg' %}" alt="pancrease" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp5" style="padding-left: 5%;">Pancrease</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    <br>
+                    The pancreas secretes digestive enzymes into the duodenum, which work to break down protein, fats and carbohydrates.
+                    In addition, the pancreas manufactures insulin and then passes it directly into the blood stream
+                    <br>
+                </p>
+            </div>
+          </div>
+      </div>
+    </td>
+
+
+    <td>
+      <div class="flip-card" id="L">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/liver.webp' %}" alt="liver" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp6" style="padding-left: 5%;">Liver</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    <br>  
+                    The liver's main function in digestion is to process nutrients absorbed from the small intestine,
+                    where bile plays an important role in the digestion of fats and vitamins.
+                    In addition, the liver cleans the body of toxins and dangerous chemicals
+                    <br>
+                </p>
+            </div>
+        </div>
+      </div>
+    </td>
+
+    </tr> 
+
+      <!--END OF SECOND ROW-->
+
+
+    <tr>
+        <td>
+      <div class="flip-card" id="G">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/gallbladder.jpeg' %}" alt="gallbladder" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp7" style="padding-left: 5%;">Gallblader</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    <br>  The gallbladder stores and concentrates bile, which is secreted by the liver,
+                    and then releases it into the duodenum in the small intestine to help absorb and digest fats.
+                    <br>
+                </p>
+            </div>
+        </div>
+      </div>
+    </td>
+
+
+    <td>
+      <div class="flip-card" id="LI">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/large_int.jpg' %}" alt="large intestine" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp8" style="padding-left: 5%;">Large Intestine</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    Food waste and undigested food, along with some of the old cells from the stomach wall, reach the small intestine.
+                    Here, the small intestine absorbs fluid from the waste into a solid form, which is known as stool.
+                    Stool is retained in the colon, which is the last part of the large intestine, until it travels to the rectum and then to the anus during defecation.
+                    It usually takes about 36 hours for stool to pass out of the colon.
+                    <br>
+                </p>
+            </div>
+        </div>
+      </div>
+    </td>
+
+    <td>
+      <div class="flip-card" id="A">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/anus.jpg' %}" alt="anus" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "sp9" style="padding-left:5%;">Anus</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                    <br>  The anus is the last part of the digestive system, and it is made up of the pelvic floor muscles and the anal sphincter.
+                    And the lining of the anus is able to detect the contents of the rectum, and this helps to know whether the contents are liquid, gaseous or solid.
+                    <br>
+                </p>
+            </div>
+        </div>
+      </div>
+      </td>
+    </tr>
+
+
+    </table>
+
+
+
+
+<br> <br> <br> <br>
+<div id="diseases">
+    <span style="text-decoration: underline; padding-left: 40%; font-weight: bolder; font-size:larger;"> 
+      Common Digestive System Disorders
+    </span>
+    <br>
+    <p>
+        <dl>
+            <dt>Gastroesophageal Reflux Disease (GERD)</dt>
+            <dd>
+                Heartburn happens, but if it occurs regularly, you may need to be evaluated for GERD. 
+                A medical provider can often diagnose GERD based on a description of symptoms alone,
+                but if the problem has been ongoing for some time, 
+                additional diagnostic testing may be necessary to evaluate 
+                if the disease has caused damage to the esophagus.
+                GERD most often presents as heartburn, but uncontrolled GERD can erode the lining of 
+                the esophagus and lead to bleeding. 
+                The condition can also cause pain in the chest so extreme that it is 
+                sometimes mistaken for a heart attack.
+            </dd>
+            <br> <br>
+
+
+            <dt>Chronic Diarrhea</dt> 
+            <dd>
+                Diarrhea is tricky to treat because it can have so many possible causes. 
+                It could be a result of the body’s inability to absorb foods — 
+                as with celiac disease and foods containing gluten — or a disease or disorder,
+                like irritable bowel syndrome (IBS), Crohn’s disease or ulcerative colitis. 
+                Infections — often viral — and even parasites can also be to blame.
+                Besides making it difficult to carry on daily living, 
+                chronic diarrhea can be an indication of a more serious problem that may need medical
+                intervention and should be evaluated by a medical professional
+            </dd>
+            <br> <br>
+
+
+            <dt>Gastroenteritis</dt> 
+            <dd>
+                Gastroenteritis is caused by an infection — either viral or bacterial — in the gut. 
+                Bacterial infections can be caused by E. coli or salmonella, 
+                while viral infections can include rotavirus or that infamous scourge of cruise ships, 
+                norovirus. Parasites, too, can cause gastroenteritis.
+            </dd>
+            <br> <br>
+
+
+            <dt>Gallstones</dt> 
+            <dd>
+                Gallstones are hard deposits that form in your gallbladder — a small, 
+                pear-shaped sac that stores and secretes bile for digestion. 
+                Nearly one million Americans are found to have gallstones every year, 
+                according to the American Gastroenterological Association. Gallstones can form when there’s too much cholesterol or waste in your bile, 
+                or if your gallbladder doesn’t empty properly.
+            </dd>
+            <br> <br>
+
+
+            <dt>Crohn’s Disease</dt> 
+            <dd>
+                Crohn’s disease is part of a group of digestive conditions called inflammatory bowel disease (IBD). 
+                Crohn’s can affect any part of the GI tract but most commonly affects the terminal ileum, 
+                which connects the end of the small bowel and the beginning of the colon. As many as 780,000 Americans may be affected by Crohn’s, 
+                according to the Crohn’s & Colitis Foundation (CCFA).
+            </dd>
+            <br> <br>
+
+
+            <dt>Irritable Bowel Syndrome</dt> 
+            <dd>
+                About 10 to 15 percent of people worldwide suffer from IBS, and of that percentage, 
+                up to 45 million people with IBS live in the United States, 
+                according to the International Foundation for Functional Gastrointestinal Disorders. 
+                Signs of IBS can vary widely from having hard, dry stools one day to loose, watery stools on another. 
+                Bloating is also a symptom of IBS.
+                What causes IBS isn’t known, but treatment of symptoms centers largely on diet,
+                such as eating low-fat, high-fiber meals and avoiding common trigger foods 
+                (dairy products, alcohol, caffeine, artificial sweeteners, and foods that produce gas). The low-FODMAP diet, 
+                which involves eliminating foods that are high in certain carbohydrates called FODMAPs (fermentable oligosaccharides, 
+                disaccharides, monosaccharides, and polyols), has also been shown to reduce IBS symptoms.
+                Additionally, friendly bacteria, such as the probiotics found in live yogurt, may help you feel better. 
+                Stress can trigger IBS symptoms, so some people find cognitive behavioral therapy or low-dose antidepressants
+                to be useful treatments, as well.
+            </dd>
+            <br>
+        </dl>
+    </p>
+</div>
+
+
+
+
+
+
+
+</body>
+</html>

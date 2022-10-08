@@ -1,0 +1,290 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'BodySystems/css/style_systems.css' %}">
+    <script src="{% static 'BodySystems/javascript.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Nervous System</title>
+</head>
+<body>
+    <div class="topnav">
+        
+
+      <a href="{% url 'home' %}" target="_blank">Home</a>
+      <a href="{% url 'about' %}" target="_blank">About</a>
+      <a href="{% url 'latest_news' %}" target="_blank">Latest News</a>
+      <a href="{% url 'list_all_department' %}" target="_blank">Comments</a> 
+
+        <div class="dropdown">
+            <button class="dropbtn" class = "actived">Body Systems
+              <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+                <a href="{% url 'digestive' %}" >Digestive system</a>
+                <a href="{% url 'respiratory' %}" target="blank">Respiratory System</a>
+                <a href="#" target="_blank">Nervous System</a> 
+                    
+          </div>
+        </div>
+        <div id="search"><input type="text" placeholder="Search..." id="search"> <button id = "SRCH"type="submit"><i class="fa fa-search"></i></button> </div>
+    
+        <div id="logo"><img src="{% static 'BodySystems/images/logo.jpg' %}" width="60px" height="50px"></div>
+    </div>
+
+
+
+
+    
+
+  <script>
+      function openNav() {
+document.getElementById("mySidenav").style.width = "150px";}
+
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+document.getElementById("mySidenav").style.width = "0";}
+
+  </script>
+
+
+
+    
+<div id = "adrrN">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#B">Brain</a>
+    <a href="#SPIN">Spinal Cord</a>
+    <a href="#N">Neuron</a>
+    <a href="#NRV">Nerve</a>
+    <a href="#disorders">Common Disorders</a>
+  </div>
+  <span style="font-size:30px;cursor:pointer;color: white;" onclick="openNav()">&#9776; Choose</span>
+
+  <div class = "nerv_vid">
+    <video width="500px" height="250px" autoplay muted loop ><source src = "{% static 'BodySystems/images/nervous_vid.webm' %}" type="video/webm"></video>
+  </div>
+
+
+</div>
+
+<br> <br>
+
+
+<!--ORGANS-->
+
+<table cellspacing="200">
+  <tr>
+  <td>
+    <div class="flip-card" id="B">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img src="{% static 'BodySystems/images/brain.jpg' %}" alt="brain" style="width:200px;height:200px;">
+          <br> <br>
+          <span class = "SP1" style="padding-left: 7%;">Brain</span>
+        </div>
+        <div class="flip-card-back">
+          <p style="font-size: large;">
+              TThe brain is one of the important, largest and central organ of the human nervous system. 
+              The human brain is composed of three major parts:
+              <ol>
+                <li>Forebrain: The anterior part of the brain, consists of Cerebrum, Hypothalamus and Thalamus.</li>
+                <li>Midbrain: The smaller and central part of the brainstem, consists of Tectum and Tegmentum.</li>
+                <li>Hindbrain: The central region of the brain, composed of Cerebellum, Medulla and Pons.</li>
+              </ol>
+              <br>
+            </p>
+        </div>
+      </div>
+    </div>
+
+    </td>
+
+
+
+
+  <td>
+    <div class="flip-card" id="SPIN" >
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+              <img src="{% static 'BodySystems/images/spinal.jpg' %}" alt="spinal" style="width:200px;height:200px;">
+              <br> <br>
+              <span class = "SP2" style="padding-left: 5%;">Spinal Cord</span> <br>
+        </div>
+        <div class="flip-card-back">
+              <p style="font-size: larger;">
+                  <br>
+                  The spinal cord is a cylindrical bundle of nerve fibers and associated tissues 
+                  enclosed within the spine and connect all parts of the body to the brain. 
+                  It begins in continuation with the medulla and extends downwards. It is enclosed 
+                  in a bony cage called vertebral column and surrounded by membranes called meninges. 
+                  <br>
+              </p>
+        </div>
+      </div>
+    </div>
+
+  </td>
+  </tr>
+
+
+  <!--END OF FIRST ROW-->
+
+  <tr>
+    <td>
+      <div class="flip-card" id="N">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="{% static 'BodySystems/images/neuron.webp' %}" alt="brain" style="width:200px;height:200px;">
+            <br> <br>
+            <span class = "SP3" style="padding-left: 7%;">Neuron</span>
+          </div>
+          <div class="flip-card-back">
+            <p style="font-size: large;">
+              A Neuron is a structured and functional unit of the nervous system  
+              The different parts of a neuron are: 
+              <ol>
+                <li>Dendrite: stretches out from the cell body of a neuron, and it is the shortest fibre in the cell body</li>
+                <li>Axon: is the longest thread on the cell body of a neuron and has an insulating and protective sheath of myelin around it.</li>
+                <li>Cell: body consists of cytoplasm and nucleus.</li>
+                <li>Synapse: is the microscopic gap between a pair of adjacent neurons over which nerve impulses pass</li>
+              </ol>
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      </td>
+
+
+    <td>
+      <div class="flip-card" id="NRV" >
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+                <img src="{% static 'BodySystems/images/nerve.jpg' %}" alt="nerve" style="width:200px;height:200px;">
+                <br> <br>
+                <span class = "SP4" style="padding-left: 5%;">Nerve</span> <br>
+          </div>
+          <div class="flip-card-back">
+                <p style="font-size: larger;">
+                  Nerves are thread-like structures that emerge from the brain and spinal cord.
+                  It carries messages to all the parts of the body. 
+                  There are three types of nerves: 
+                  <ol>
+                    <li>Sensory nerves send messages from all senses to brain.</li>
+                    <li>Motor nerves carry messages from brain to all muscles.</li>
+                    <li>Mixed nerves carry both sensory and motor nerves.</li>
+                    <li>Cranial nerves begin from the brain carry impulses from the central nervous system.</li>
+                  </ol> 
+                  <br>
+                </p>
+          </div>
+        </div>
+      </div>
+    
+    </td>
+    </tr>
+    </table>
+
+
+    <!--DIORDERS-->
+
+    <br> <br> <br> <br>
+  <div id="disorders">
+    <span style="text-decoration: underline; padding-left: 40%; font-weight: bolder; font-size:larger;"> 
+      Common Nervous System Disorders
+    </span>
+    <br>
+    <p>
+        <dl>
+            <dt>Alzheimer's</dt>
+            <dd>
+              Alzheimer’s disease is the most common type of irreversible dementia 
+              (gradual loss of memory, intellect, rational thought and social skills). 
+              Nearly 7 out of 10 people with dementia have the Alzheimer’s type.
+              While Alzheimer’s disease affects up to 1 in 10 Australians over 65 years of age, 
+              and up to 3 in 10 Australians over 85, it is not a normal part of ageing
+            </dd>
+            <br> <br>
+
+
+            <dt>Acute Spinal Cord Injury</dt> 
+            <dd>
+              Acute spinal cord injury (SCI) is due to a traumatic injury that bruises,
+              partially tears, or completely tears the spinal cord. SCI is a common cause of permanent disability 
+              and death in children and adults
+            </dd>
+            <br> <br>
+
+
+            <dt>Amyotrophic Lateral Sclerosis (ALS)</dt> 
+            <dd>
+              Amyotrophic lateral sclerosis is a fatal type of motor neuron disease. It is characterized by progressive 
+              degeneration of nerve cells in the spinal cord and brain. It's often called Lou Gehrig's disease, 
+              after a famous baseball player who died from the disease.
+              ALS it is one of the most devastating of the disorders that affects the function of nerves and muscles.
+              ALS does not affect mental functioning or the senses (such as seeing or hearing), and it is not contagious. 
+              Currently, there is no cure for this disease.
+              ALS most commonly affects people of any racial or ethnic group between the ages of 40 and 70, 
+              although it can occur at a younger age
+            </dd>
+            <br> <br>
+
+
+            <dt>Cerebral Aneurysm</dt> 
+            <dd>
+              The presence of a brain aneurysm may not be known until it ruptures. Most brain aneurysms 
+              have no symptoms and are small in size (less than 10 millimeters, or less than four-tenths of an inch, in diameter). 
+              Smaller aneurysms may have a lower risk of rupture.
+              However, occasionally there may be symptoms that happen before a rupture 
+              due to a small amount of blood that may leak. This is called "sentinel hemorrhage" into the brain. 
+              Some aneurysms are symptomatic because they press on adjacent structures, such as nerves to the eye. 
+              They can cause visual loss or diminished eye movements, even if the aneurysm has not ruptured.
+            </dd>
+            <br> <br>
+
+
+            <dt>Ataxia</dt> 
+            <dd>
+              Ataxia means without coordination. People with ataxia lose muscle control in their arms and legs. 
+              This may lead to a lack of balance, coordination, and trouble walking. 
+              Ataxia may affect the fingers, hands, arms, legs, body, speech, and even eye movements.
+            </dd>
+            <br> <br>
+
+
+            <dt>Guillain-Barré Syndrome</dt> 
+            <dd>
+              Guillain-Barré syndrome (GBS) is also called acute inflammatory demyelinating polyradiculoneuropathy (AIDP). 
+              It is a neurological disorder in which the body's immune system attacks the peripheral nervous system, 
+              the part of the nervous system outside the brain and spinal cord. 
+              The onset of GBS can be quite sudden and unexpected and requires immediate hospitalization. 
+              It can develop over a few days, or it may take up to several weeks with the greatest weakness occurring 
+              within the first couple of weeks after symptoms appear.
+            </dd>
+            <br> <br>
+
+
+            <dt>Motor neurone disease (MND)</dt> 
+            <dd>
+            Motor neurone disease (MND) is an uncommon condition that affects the brain and nerves. 
+            It causes weakness that gets worse over time. Motor neurone disease is an uncommon condition 
+            that mainly affects people in their 60s and 70s, but it can affect adults of all ages. 
+            It's caused by a problem with cells in the brain and nerves called motor neurones. 
+            These cells gradually stop working over time. It's not known why this happens.
+            </dd>
+        </dl>
+    </p>
+
+  </div>
+
+  
+
+</body>
+</html>

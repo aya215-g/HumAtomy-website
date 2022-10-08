@@ -1,0 +1,45 @@
+{% extends 'BodySystems/index.html' %}
+
+{% block content %}
+
+<div class="container">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item font-weight-bold">
+            <a href="{% url 'about' %}">Systems</a>
+        </li>
+        <li class="breadcrumb-item font-weight-bold active">{{System.name}}</li>
+    </ol>
+
+</div>
+
+
+<div class="container">
+    <table class="table table-bordered table-hover">
+        <theader class="thead-light">
+            <th> Disease Name </th>
+            <th> Disease Description </th>
+        </theader>
+        {% for disease in System.diseases.all %}
+        <tr>
+            <td> {{disease.name}} </td>
+            <td> {{disease.description}} </td>
+        </tr>
+
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+<div class="container">
+    <a href="{% url 'add_new_disease' System.pk %}" class="btn btn-danger">
+        ADD NEW DISEASE 
+    </a>
+    <br> <br>
+
+</div>
+
+
+
+{% endblock %}

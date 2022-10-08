@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel = "stylesheet" href="{% static 'BodySystems/CSS/bootstrap.min.css' %}">
+</head>
+<style>
+    .row{
+        font:bold;
+    }
+</style>
+<body style="background-color: #e9ecef;">
+    <header style="background-color:rgb(5, 78, 92); color: white; font-size: xx-large; font-weight: bolder;
+    padding: 20px; margin-bottom: 20px; text-align: center;">
+     Sign Up
+        
+    </header>
+    {% block content %}
+
+    {% endblock %}
+
+<div class="row">
+    <div class="col-md-10 font-weight-bolder">
+      Welcom To Our Website
+    </div>
+    <div class="col-md-2 font-weight-bolder">
+      {% if user.is_authenticated %}
+         Welcome <span class="text-success"> {{user.username}}</span>
+      {% else %}
+         <a href="{% url 'sign up to library'%}" class="text-danger"> Sign Up</a>
+      {% endif%}   
+  </div>
+  </div>
+</body>
+</html>
+

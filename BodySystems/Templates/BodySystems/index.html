@@ -1,0 +1,42 @@
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'BodySystems/css/bootstrap.min.css'%}">
+<link rel="stylesheet" href="{% static 'BodySystems/css/styleabout.css'%}">
+
+<title> Body Systems</title>
+
+
+
+
+<div class="topnav">
+      
+
+    <a href="{% url 'home' %}" target="_blank">Home</a>
+    <a href="#" target="_blank">About</a>
+    <a href="{% url 'latest_news' %}" target="_blank">Latest News</a>
+    <a href="{% url 'list_all_department' %}" target="_blank">Comments</a> 
+
+    <div class="dropdown">
+        <button class="dropbtn" class = "actived">Body Systems
+          <i class="fa fa-caret-down"></i>
+        </button>
+      <div class="dropdown-content">
+            <a href="digestive.html" target="blank">Digestive system</a>
+            <a href="respiratory.html">Respiratory System</a>
+            <a href="nervous.html" target="_blank">Nervous System</a>  
+            
+      </div>
+    </div>
+    <div id="search"><input type="text" placeholder="Search..." id="search"> </div>
+
+  
+    <div id="logo"><img src="{% static 'BodySystems/images/logo.jpg' %}" width="60px" height="50px"></div>
+</div>
+<br> 
+    {% block content %}
+
+    {% endblock %}
+
+
+

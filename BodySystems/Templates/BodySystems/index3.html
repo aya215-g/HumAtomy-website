@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Latest News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'BodySystems/CSS/bootstrap.min.css'%}">
+<link rel="stylesheet" href="{% static 'BodySystems/style.css' %}">
+</head>
+
+
+<body style="background-color: rgb(216, 211, 211);">
+    <div class="topnav">
+      
+
+        <a href="{% url 'home' %}" target="_blank">Home</a>
+        <a href="{% url 'about' %}" target="_blank">About</a>
+        <a href="{% url 'latest_news' %}" target="_blank">Latest News</a>
+        <a href="{% url 'list_all_department' %}" target="_blank">Comments</a> 
+
+        <div class="dropdown">
+            <button class="dropbtn" class = "actived">Body Systems
+              <i class="fa fa-caret-down"></i>
+            </button>
+          <div class="dropdown-content">
+                <a href="digestive.html" target="blank">Digestive system</a>
+                <a href="#">Respiratory System</a>
+                <a href="nervous.html" target="_blank">Nervous System</a>  
+                
+          </div>
+        </div>
+        <div id="search"><input type="text" placeholder="Search..." id="search"></div>
+    
+      
+        <div id="logo"><img src="{% static 'BodySystems/images/logo.jpg' %}" width="60px" height="50px"></div>
+    </div>
+
+    <br> <br>
+
+
+{% for index, row in data.iterrows %}
+<div class="container" style="background-color: rgb(216, 211, 211);">
+
+    <h1>{{ row.title }}</h1>
+        {% if row.author  %}
+        <span >{{ row.author }}</span>
+    {% else %}
+        <span>author not available</span>
+    {% endif %}
+    <h6>{{ row.publishedAt }}</h6>
+    <p>{{ row.description }}</p>
+    <a href="{{ row.url }}"> refrence</a> <br>
+    <img style="width: 20%; margin: 5px;" src="{{row.urlToImage}}">
+    <p>{{ row.content }}</p>
+<hr >
+</div>
+{% endfor %}
+
+</body>
+</html>
